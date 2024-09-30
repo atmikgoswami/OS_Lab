@@ -1,0 +1,220 @@
+/***********************************************************************
+*
+* Name: Atmik Goswami
+* Roll: 002211001104
+* Date: Mon Aug  5 12:35:04 IST 2024
+*
+* Assignment 1A : Run the commands and validate the output
+*	          Example of Output Validation 
+*
+***********************************************************************/
+
+1) who:-It displays the information about all the users who have logged into the system currently
+	
+	[be22104@localhost OS_Lab]$ who
+	(unknown) :0           2023-10-30 11:07 (:0)
+	be2297   pts/0        2024-08-05 11:30 (172.16.4.217)
+	be2276   pts/1        2024-08-05 11:30 (172.16.4.203)
+	be2289   pts/2        2024-08-05 11:31 (172.16.4.202)
+	be22L06  pts/3        2024-08-05 11:31 (172.16.4.209)
+	be21140  pts/4        2024-08-05 11:31 (172.16.4.236)
+	be22108  pts/5        2024-08-05 11:31 (172.16.4.218)
+	be22109  pts/6        2024-08-05 11:32 (172.16.4.207)
+	be2298   pts/7        2024-08-05 11:32 (172.16.4.221)
+	be2288   pts/8        2024-08-05 11:34 (172.16.4.212)
+	be2296   pts/9        2024-08-05 11:35 (172.16.4.208)
+	be2284   pts/10       2024-08-05 11:35 (172.16.4.213)
+	be22100  pts/11       2024-08-05 11:37 (172.16.4.205)
+	be2286   pts/12       2024-08-05 11:37 (172.16.4.214)
+	be22107  pts/13       2024-08-05 11:38 (172.16.4.216)
+	be2295   pts/14       2024-08-05 11:40 (172.16.4.226)
+	be2277   pts/15       2024-08-05 11:43 (172.16.4.225)
+	be2293   pts/17       2024-08-05 11:44 (172.16.4.204)
+	be22106  pts/19       2024-08-05 11:46 (172.16.4.206)
+	be2281   pts/20       2024-08-05 12:36 (172.16.4.219)
+	be22L04  pts/21       2024-08-05 11:50 (172.16.4.228)
+	be22L05  pts/22       2024-08-05 11:54 (172.16.4.230)
+	be22104  pts/23       2024-08-05 12:00 (172.16.4.224)
+	be22105  pts/24       2024-08-05 11:56 (172.16.4.223)
+	be2294   pts/25       2024-08-05 12:03 (172.16.4.231)
+	be2292   pts/26       2024-08-05 12:31 (172.16.4.210)
+	be22103  pts/27       2024-08-05 12:09 (172.16.4.211)
+	be2279   pts/28       2024-08-05 12:24 (172.16.4.222)
+	be2290   pts/29       2024-08-05 12:25 (172.16.4.215)
+	be2298   pts/31       2024-08-05 12:33 (172.16.4.221)
+
+2) whoami:- It displays Current username, Terminal number, date and time at which user logged into the system
+
+	[be22104@localhost OS_Lab]$ who am i
+	be22104  pts/23       2024-08-05 12:00 (172.16.4.224)
+	
+3) pwd:- It displays current working directory
+
+	[be22104@localhost OS_Lab]$ pwd
+	/home/usr/student/ug/yr22/be22104/OS_Lab
+	
+4) date:- It displays system date and time
+
+	[be22104@localhost OS_Lab]$ date
+	Mon Aug  5 12:42:05 IST 2024
+
+5) ls - It lists the files and directories stored in the current directory. To list the files in a directory use the following syntax: $ls dirname
+
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a.cpp  test.csv
+
+6) mkdir:-  It is used to create directories by using the command: $mkdir dirname
+
+	[be22104@localhost OS_Lab]$ mkdir temp_dir
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a.cpp  temp_dir  test.csv
+
+7) clear- It clears the screen
+
+8) cd - It is used to change the current working directory to any other directory specified
+
+	[be22104@localhost OS_Lab]$ cd temp_dir
+	[be22104@localhost temp_dir]$	
+
+9) cd.. -This command is used to come out from the current working directory.
+
+	[be22104@localhost temp_dir]$ cd ..
+	[be22104@localhost OS_Lab]$ 
+
+10) rmdir - Directories can be deleted using the rmdir command - $rmdir dirname
+
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a.cpp  temp_dir  test.csv
+	[be22104@localhost OS_Lab]$ rmdir temp_dir
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a.cpp  test.csv
+	
+11) cat:- It displays the contents of a file - $cat filename
+
+	[be22104@localhost OS_Lab]$ cat a.cpp
+	#include<iostream>
+	using namespace std;
+
+	int main(){
+	        cout<<"Hello world\n";
+	        return 0;
+	}
+
+12) cp - It is used to copy a file - $ cp source_file destination_file
+
+	[be22104@localhost OS_Lab]$ cat b.cpp
+	[be22104@localhost OS_Lab]$ cp a.cpp b.cpp
+	[be22104@localhost OS_Lab]$ cat b.cpp
+	#include<iostream>
+	using namespace std;
+
+	int main(){
+	        cout<<"Hello world\n";
+	        return 0;
+	}
+
+13) mv- It is used to change the name of a file - $ mv old_file new_file
+
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a.cpp  b.cpp  test.csv
+	[be22104@localhost OS_Lab]$ mv a.cpp a1.cpp
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a1.cpp  b.cpp  test.csv
+	
+14) rm:- It is used to delete an existing file - $ rm filename
+
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a1.cpp  b.cpp  test.csv
+	[be22104@localhost OS_Lab]$ rm b.cpp 
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a1.cpp  test.csv
+	
+15) stat- It is used to display file or file system status - $ stat filename
+
+	[be22104@localhost OS_Lab]$ stat a.cpp
+	  File: âcppâ Size: 90              Blocks: 8          IO Block: 4096   regular file
+	Device: fd02h/64770d    Inode: 7800786494  Links: 1
+	Access: (0644/-rw-r--r--)  Uid: ( 3087/ be22104)   Gid: ( 2924/  ugyr22)
+	Context: unconfined_u:object_r:user_home_t:s0
+	Access: 2024-08-05 12:47:51.841218573 +0530
+	Modify: 2024-08-05 12:11:11.582190234 +0530
+	Change: 2024-08-05 12:51:30.418221389 +0530
+	 Birth: -
+	
+16) stty:- Change and print terminal line settings. Its option "-stty -a" prints all current settings in human readable form
+
+	[be22104@localhost OS_Lab]$ stty -a
+	speed 38400 baud; rows 40; columns 157; line = 0;
+	intr = ^C; quit = ^\; erase = ^?; kill = ^U; eof = ^D; eol = <undef>; eol2 = <undef>; swtch = <undef>; start = ^Q; stop = ^S; susp = ^Z; rprnt = ^R;
+	werase = ^W; lnext = ^V; flush = ^O; min = 1; time = 0;
+	-parenb -parodd -cmspar cs8 -hupcl -cstopb cread -clocal -crtscts
+	-ignbrk -brkint -ignpar -parmrk -inpck -istrip -inlcr -igncr icrnl ixon -ixoff -iuclc -ixany -imaxbel -iutf8
+	opost -olcuc -ocrnl onlcr -onocr -onlret -ofill -ofdel nl0 cr0 tab0 bs0 vt0 ff0
+	isig icanon iexten echo echoe echok -echonl -noflsh -xcase -tostop -echoprt echoctl echoke
+	[be22104@localhost OS_Lab]$ stty -g
+	500:5:bf:8a3b:3:1c:7f:15:4:0:1:0:11:13:1a:0:12:f:17:16:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+
+17) tty:- It prints the filename of the terminal connected to standard input.
+
+	[be22104@localhost OS_Lab]$ tty
+	/dev/pts/23
+
+18) uname:- It prints system information
+
+	[be22104@localhost OS_Lab]$ uname
+	Linux
+
+19) umask:- It specifies user file creation mask, implying which of the 3 permissions are to be denied to the owner,group and others.
+	
+	[be22104@localhost OS_Lab]$ umask
+	0022
+	
+20) find:- It searches for files in a directory hierarchy
+
+	[be22104@localhost OS_Lab]$ ls
+	1A.txt  1B.c  1BOutput  a.cpp  test.csv
+	[be22104@localhost OS_Lab]$ find a.cpp
+	a.cpp
+	
+21) sort:- It sorts the lines of text files
+
+	[be22104@localhost OS_Lab]$ cat test.csv
+	atmik, 1, 500
+	abc, 2, 300
+	bcd, 4, 900
+	efg, 5, 100
+	[be22104@localhost OS_Lab]$ sort test.csv -k3
+	efg, 5, 100
+	abc, 2, 300
+	atmik, 1, 500
+	bcd, 4, 900
+	
+22) ps - It displays information about the current processes.
+
+	[be22104@localhost OS_Lab]$ ps
+	  PID TTY          TIME CMD
+	 3802 pts/23   00:00:00 bash
+	 8414 pts/23   00:00:00 ps
+	
+23) chmod 777 file1 - gives full permission to owner, group and others
+
+	[be22104@localhost OS_Lab]$ chmod 777 a.cpp
+	[be22104@localhost OS_Lab]$ ls -l
+	total 32
+	-rw-r--r--. 1 be22104 ugyr22 7401 Aug  5 12:58 1A.txt
+	-rw-r--r--. 1 be22104 ugyr22 1708 Jul 29 13:17 1B.c
+	-rwxr-xr-x. 1 be22104 ugyr22 8712 Aug  5 12:15 1BOutput
+	-rwxrwxrwx. 1 be22104 ugyr22   90 Aug  5 12:11 a.cpp
+	-rw-r--r--. 1 be22104 ugyr22   50 Aug  5 12:29 test.csv
+
+24) chmod o-w file1 - Removes write permission for others.
+
+	[be22104@localhost OS_Lab]$ chmod o-w a.cpp
+	[be22104@localhost OS_Lab]$ ls -l
+	total 32
+	-rw-r--r--. 1 be22104 ugyr22 7769 Aug  5 12:59 1A.txt
+	-rw-r--r--. 1 be22104 ugyr22 1708 Jul 29 13:17 1B.c
+	-rwxr-xr-x. 1 be22104 ugyr22 8712 Aug  5 12:15 1BOutput
+	-rwxrwxr-x. 1 be22104 ugyr22   90 Aug  5 12:11 a.cpp
+	-rw-r--r--. 1 be22104 ugyr22   50 Aug  5 12:29 test.csv
+	
