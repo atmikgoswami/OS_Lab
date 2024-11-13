@@ -1,3 +1,31 @@
+/************************************************************************************************************************************************************
+ * 
+ *  Name: Atmik Goswami
+ *  Roll: 002211001104
+ *  Date: Mon Sep 28 13:12:41 IST 2024
+ *      
+ *  Assignment No: 7
+ *  Assignment Details:
+ *  Create a main process which creates three threads Th1, Th2, and Th3. The main process also creates two random quantities (X, Y), both less than 10. 
+ *  These two values will be placed by the main process in the shared memory that is accessible by all the three threads Th1, Th2 and Th3. 
+ *  The shared memory will be created by the main process also. For each pair of values (X,Y), thread Th1 will compute A (X*Y) and the thread Th2 will 
+ *  compute B (X*Y)/2). Similarly,  Th3 computes C (X+Y), Th2 again computes D ((X*Y)/(X+Y)), and finally Th1 computes E ((X+Y)(X-Y)). 
+ *  All these values are kept in the shared memory in a tabular fashion.
+ *
+ *  Input Description: Enter the number of pairs
+ *  Output Description: Displays the values of A,B,C,D,E computed by the three threads in tabular fashion.
+ *  Compilation command: gcc 1104_7A.c -o Output7A -std=gnu99 -lpthread
+ *  Execution sequence: ./Output7A <num_pairs>  		                           
+ *                               
+ *  Sample Input: [be22104@localhost Assignment7]$ ./Output7A 4
+ *  Sample Output:
+ *  X       Y       A       B       C       D       E
+ *  5       7       35      17      12      2       -24
+ *  6       3       18      9       9       2       27
+ *  7       4       28      14      11      2       33
+ *  3       4       12      6       7       1       -7
+ ***************************************************************************************************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
