@@ -1,3 +1,34 @@
+/**************************************************************************************************************************************
+ * 
+ *  Name: Atmik Goswami
+ *  Roll: 002211001104
+ *  Date: Mon Oct 28 12:21:32 IST 2024
+ *      
+ *  Assignment No: 6
+ *  Assignment Details:
+ *  Write a C program which should print the following values on terminal:
+ *      Processor Informations (Vendor ID, Model Name and Cache Size in MB)
+ *      Kernel Name, Kernel Release and Operating System Name.
+ *      The amount of memory configured into this computer and Free Memory
+ *      Amount of time since the system was last booted (In Hours, Minutes, Seconds)
+ *
+ *  Input Description: None
+ *  Output Description: 
+ *  Compilation command: gcc 1104_6A.c -o Output6A
+ *  Execution sequence: ./Output6A              
+ *                               
+ *  Sample Input: None
+ *  Sample Output:
+ *  [be22104@localhost Assignment6]$ ./Output6A
+ *  Processor Vendor ID: GenuineIntel
+ *  Processor Model Name: Intel(R) Xeon(R) CPU E5-2609 v4 @ 1.70GHz
+ *  Cache Size: 20480 KB
+ *  Kernel Info: Red Hat 4.8.5-11 3.10.0-514.21.1.el7.x86_64 mockbuild@sl7-uefisign.fnal.gov
+ *  Total Memory: 64013.00 MB
+ *  Free Memory: 60897.58 MB
+ *  System Uptime: 557 hours, 52 minutes, 36 seconds
+ ***********************************************************************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 
